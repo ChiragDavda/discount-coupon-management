@@ -1,0 +1,85 @@
+01. Write a Python program to calculate the length of a string. 
+
+02. Write a Python program to count the number of characters (character frequency) in a string.  
+Sample String : google.com'
+Expected Result : {'o': 3, 'g': 2, '.': 1, 'e': 1, 'l': 1, 'm': 1, 'c': 1}
+
+03. Write a Python program to get a string made of the first 2 and the last 2 chars from a given a string. If the string length is less than 2, return instead the empty string.  
+Sample String : 'w3resource'
+Expected Result : 'w3ce'
+Sample String : 'w3'
+Expected Result : 'w3w3'
+Sample String : ' w'
+Expected Result : Empty String 
+
+04. Write a Python program to get a string from a given string where all occurrences of its first char have been changed to '$', except the first char itself.  
+Sample String : 'restart'
+Expected Result : 'resta$t'
+
+05. Write a Python program to get a single string from two given strings, separated by a space and swap the first two characters of each string.  
+Sample String : 'abc', 'xyz' 
+Expected Result : 'xyc abz'
+
+06. Write a Python program to add 'ing' at the end of a given string (length should be at least 3). If the given string is already ends with 'ing' then add 'ly' instead. If the string length of the given string is less than 3, leave it unchanged.  
+Sample String : 'abc'
+Expected Result : 'abcing' 
+Sample String : 'string'
+Expected Result : 'stringly'
+
+07. Write a Python program to find the first appearance of the substring 'not' and 'poor' from a given string, if 'bad' follows the 'poor', replace the whole 'not'...'poor' substring with 'good'. Return the resulting string.  
+Sample String : 'The lyrics is not that poor!'
+Expected Result : 'The lyrics is good!'
+
+08. Write a Python function that takes a list of words and returns the length of the longest one.  
+
+09. Write a Python program to remove the nth index character from a non empty string. 
+
+10. Write a Python program to change a given string to a new string where the first and last chars have been exchanged. 
+
+11. Write a Python program to remove the characters which have odd index values of a given string. 
+
+12. Write a Python program to count the occurrences of each word in a given sentence. 
+
+13. Write a Python script that takes input from the user and displays that input back in upper and lower cases. 
+
+14. Write a Python program that accepts a comma separated sequence of words as input and prints the unique words in sorted form (alphanumerically). 
+Sample Words : red, white, black, red, green, black
+Expected Result : black, green, red, white,red
+
+15. Write a Python function to create the HTML string with tags around the word(s). 
+Sample function and result : 
+add_tags('i', 'Python') -> '<i>Python</i>'
+add_tags('b', 'Python Tutorial') -> '<b>Python Tutorial</b>'
+
+16. Write a Python function to insert a string in the middle of a string. 
+Sample function and result : 
+insert_sting_middle('[[]]', 'Python') -> [[Python]]
+insert_sting_middle('{{}}', 'PHP') -> {{PHP}}
+
+17. Write a Python function to get a string made of 4 copies of the last two characters of a specified string (length must be at least 2). 
+Sample function and result : 
+insert_end('Python') -> onononon
+insert_end('Exercises') -> eseseses
+
+18. Write a Python function to get a string made of its first three characters of a specified string. If the length of the string is less than 3 then return the original string. 
+Sample function and result : 
+first_three('ipy') -> ipy
+first_three('python') -> pyt
+
+19. Write a Python function to get the first half of a specified string of even length. 
+Sample function and result :
+string_first_half('Python') -> Pyt
+
+20. Write a Python function to reverses a string if it's length is a multiple of 4.
+
+21. Write a Python function to convert a given string to all uppercase if it contains at least 2 uppercase characters in the first 4 characters.
+
+22. Write a Python program to check whether a string starts with specified characters.
+
+23. Write a Python program to display a number in left, right and center aligned of width 10.
+
+24. Write a Python program to count occurrences of a substring in a string.
+
+25. Write a Python program to reverse a string.
+
+26. Write a Python program to reverse words in a string.
