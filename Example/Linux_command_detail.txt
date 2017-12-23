@@ -1,0 +1,287 @@
+For ls command:-
+https://www.rapidtables.com/code/linux/ls.html
+Usage: ls [OPTION]... [FILE]...
+List information about the FILEs (the current directory by default).
+Sort entries alphabetically if none of -cftuvSUX nor --sort is specified.
+
+Mandatory arguments to long options are mandatory for short options too.
+  -a, --all                  do not ignore entries starting with .
+  -A, --almost-all           do not list implied . and ..
+      --author               with -l, print the author of each file
+  -b, --escape               print C-style escapes for nongraphic characters
+      --block-size=SIZE      scale sizes by SIZE before printing them; e.g.,
+                               '--block-size=M' prints sizes in units of
+                               1,048,576 bytes; see SIZE format below
+  -B, --ignore-backups       do not list implied entries ending with ~
+  -c                         with -lt: sort by, and show, ctime (time of last
+                               modification of file status information);
+                               with -l: show ctime and sort by name;
+                               otherwise: sort by ctime, newest first
+  -C                         list entries by columns
+      --color[=WHEN]         colorize the output; WHEN can be 'always' (default
+                               if omitted), 'auto', or 'never'; more info below
+  -d, --directory            list directories themselves, not their contents
+  -D, --dired                generate output designed for Emacs' dired mode
+  -f                         do not sort, enable -aU, disable -ls --color
+  -F, --classify             append indicator (one of */=>@|) to entries
+      --file-type            likewise, except do not append '*'
+      --format=WORD          across -x, commas -m, horizontal -x, long -l,
+                               single-column -1, verbose -l, vertical -C
+      --full-time            like -l --time-style=full-iso
+  -g                         like -l, but do not list owner
+      --group-directories-first
+                             group directories before files;
+                               can be augmented with a --sort option, but any
+                               use of --sort=none (-U) disables grouping
+  -G, --no-group             in a long listing, don't print group names
+  -h, --human-readable       with -l and/or -s, print human readable sizes
+                               (e.g., 1K 234M 2G)
+      --si                   likewise, but use powers of 1000 not 1024
+  -H, --dereference-command-line
+                             follow symbolic links listed on the command line
+      --dereference-command-line-symlink-to-dir
+                             follow each command line symbolic link
+                               that points to a directory
+      --hide=PATTERN         do not list implied entries matching shell PATTERN
+                               (overridden by -a or -A)
+      --indicator-style=WORD  append indicator with style WORD to entry names:
+                               none (default), slash (-p),
+                               file-type (--file-type), classify (-F)
+  -i, --inode                print the index number of each file
+  -I, --ignore=PATTERN       do not list implied entries matching shell PATTERN
+  -k, --kibibytes            default to 1024-byte blocks for disk usage
+  -l                         use a long listing format
+  -L, --dereference          when showing file information for a symbolic
+                               link, show information for the file the link
+                               references rather than for the link itself
+  -m                         fill width with a comma separated list of entries
+  -n, --numeric-uid-gid      like -l, but list numeric user and group IDs
+  -N, --literal              print raw entry names (don't treat e.g. control
+                               characters specially)
+  -o                         like -l, but do not list group information
+  -p, --indicator-style=slash
+                             append / indicator to directories
+  -q, --hide-control-chars   print ? instead of nongraphic characters
+      --show-control-chars   show nongraphic characters as-is (the default,
+                               unless program is 'ls' and output is a terminal)
+  -Q, --quote-name           enclose entry names in double quotes
+      --quoting-style=WORD   use quoting style WORD for entry names:
+                               literal, locale, shell, shell-always,
+                               shell-escape, shell-escape-always, c, escape
+  -r, --reverse              reverse order while sorting
+  -R, --recursive            list subdirectories recursively
+  -s, --size                 print the allocated size of each file, in blocks
+  -S                         sort by file size, largest first
+      --sort=WORD            sort by WORD instead of name: none (-U), size (-S),
+                               time (-t), version (-v), extension (-X)
+      --time=WORD            with -l, show time as WORD instead of default
+                               modification time: atime or access or use (-u);
+                               ctime or status (-c); also use specified time
+                               as sort key if --sort=time (newest first)
+      --time-style=STYLE     with -l, show times using style STYLE:
+                               full-iso, long-iso, iso, locale, or +FORMAT;
+                               FORMAT is interpreted like in 'date'; if FORMAT
+                               is FORMAT1<newline>FORMAT2, then FORMAT1 applies
+                               to non-recent files and FORMAT2 to recent files;
+                               if STYLE is prefixed with 'posix-', STYLE
+                               takes effect only outside the POSIX locale
+  -t                         sort by modification time, newest first
+  -T, --tabsize=COLS         assume tab stops at each COLS instead of 8
+  -u                         with -lt: sort by, and show, access time;
+                               with -l: show access time and sort by name;
+                               otherwise: sort by access time, newest first
+  -U                         do not sort; list entries in directory order
+  -v                         natural sort of (version) numbers within text
+  -w, --width=COLS           set output width to COLS.  0 means no limit
+  -x                         list entries by lines instead of by columns
+  -X                         sort alphabetically by entry extension
+  -Z, --context              print any security context of each file
+  -1                         list one file per line.  Avoid '\n' with -q or -b
+      --help     display this help and exit
+      --version  output version information and exit
+
+The SIZE argument is an integer and optional unit (example: 10K is 10*1024).
+Units are K,M,G,T,P,E,Z,Y (powers of 1024) or KB,MB,... (powers of 1000).
+
+Using color to distinguish file types is disabled both by default and
+with --color=never.  With --color=auto, ls emits color codes only when
+standard output is connected to a terminal.  The LS_COLORS environment
+variable can change the settings.  Use the dircolors command to set it.
+
+Exit status:
+ 0  if OK,
+ 1  if minor problems (e.g., cannot access subdirectory),
+ 2  if serious trouble (e.g., cannot access command-line argument).
+
+
+
+ option   description
+ls -a   list all files including hidden file starting with '.'
+ls --color  colored list [=always/never/auto]
+ls -d   list directories - with ' */'
+ls -F   add one char of */=>@| to enteries
+ls -i   list file's inode index number
+ls -l   list with long format - show permissions
+ls -la  list long format including hidden files
+ls -lh  list long format with readable file size
+ls -ls  list with long format with file size
+ls -r   list in reverse order
+ls -R   list recursively directory tree
+ls -s   list file size
+ls -S   sort by file size
+ls -t   sort by time & date
+ls -X   sort by extension name
+
+cp Command:
+https://www.rapidtables.com/code/linux/cp.html
+copy file to destination:
+cp a_detail_college.csv test
+copy multiplt files:
+cp a_detail_student.csv a_detail_college.csv test
+copy all particular extension file to destination:
+cp *.csv test
+copy all data(here we woludn't copy any directories):
+cp * test
+if we want to copy dirctory than use belo command:
+cp -R <source directory> <destionation directory where we want to copy all data of directory>
+forcefully to copy any file:
+cp -f <filename> <directory>
+how to copy of one file data into another file(if file does not exists than make new file)
+cp -f <src file> <destination file>
+we want to overwrite any file and we want to know it from user than use below command(if file does not exists in that directory than it will not ask you about overwrite permissoin)
+cp -i testing.py test
+if we get omiting directory erro than use below syntax
+cp -R <src file or directory> <des directory or file>
+if we want to perform task that which data are copied from src to des than use below code
+cp -Rv files test1
+
+
+Learn about cat command
+Get content of the any file or get two files content and make another file
+cat <file_name>
+How to get two files or more than it's data
+cat <file_name1> <file_name2>...<file_name n>
+display data with line number than use below commands
+cat -n <filename>for all lines
+cat -b <filename>for nonbalnk line
+display one blank line insted of multiple lines than use below command
+cat -s <filename>
+
+cat -b  add line numbers to non blank lines
+cat -n  add line numbers to all lines
+cat -s  squeeze blank lines to one line
+cat -E  show $ at the end of line
+cat -T  show ^I instead of tabs
+
+cd command
+if we want to change direcorty which get white space in name than use bellow command
+cd "my Test"
+cd my\ Test
+cd 'my Test'
+
+how to rename any filename and directory name
+mv <old file_name> <new file_name>
+mv <old directory name> <new directory name>
+
+how to move all data of any directory into current directory.
+mv <src directory path> .
+i.e. mv /home/erp/Desktop/Backup/* .
+
+
+more exicting data manipulation from given data
+ls -lt
+total 96
+-rw-rw-r-- 1 erp erp 10140 Dec 18 11:59 Linux_command_detail.txt
+drwxrwxr-x 7 erp erp  4096 Dec 18 11:34 CSV_application
+drwxrwxr-x 2 erp erp  4096 Dec 18 11:31 Backup
+-rw-rw-r-- 1 erp erp   734 Dec 18 11:14 python.txt
+-rw-rw-r-- 1 erp erp     9 Dec 16 11:47 cricket.txt
+-rw-rw-r-- 1 erp erp 27102 Dec 15 18:58 postgresql_ALUMANI_managenment.zip
+-rw-rw-r-- 1 erp erp 31733 Dec 15 18:58 CSV_ALUMANI_management.zip
+drwxrwxr-x 5 erp erp  4096 Dec 15 18:27 postgresql
+drwxrwxr-x 2 erp erp  4096 Dec 14 18:55 Since_work
+
+#now get specific column data
+ls -lt |cut -d ' ' -f 1
+o/p:
+total
+-rw-rw-r--
+drwxrwxr-x
+drwxrwxr-x
+-rw-rw-r--
+-rw-rw-r--
+-rw-rw-r--
+-rw-rw-r--
+drwxrwxr-x
+drwxrwxr-x
+
+#important url
+https://shapeshed.com/unix-cut/
+
+
+#for gzip url
+https://www.javatpoint.com/linux-gzip
+if we want to  multiple file to compress and use as zip file than use it.
+normally this command make all file in zip format.
+gzip test1.txt
+here it convert a file and make another file and store in it
+cat test1.txt test2.txt | gzip > test.gz
+in above command test named file will be created and it have not any extendsion on that file.
+if we want to know much data was compressed than use below command
+gzip -l test.gz
+how to unzip data
+gzip -d test.gz
+
+ln command
+ln syntax
+
+ln [OPTION]... TARGET [...] [LINKNAME [...]]
+
+Options
+
+Here are the options that can be passed to the ln command.
+--backup[=CONTROL]  Use this option to additionally create a backup of each existing destination file. The style of backup is optionally defined by the value of CONTROL. See below for more information.
+-b  This functions like --backup, but you cannot specify the CONTROL; the default style (simple) is used.
+-d, -F, --directory   This option allows the superuser to attempt to hard link directories (although it will probably fail due to system restrictions, even for the superuser).
+-f, --force   If the destination file or files already exist, overwrite them.
+-i, --interactive   Prompt the user before overwriting destination files.
+-L, --logical   Dereference TARGETs that are symbolic links. In other words, if you are trying to create a link (or a symlink) to a symlink, link to what it links to, not to the symlink itself..
+-n, --no-dereference  Treat LINKNAME as a normal file if it is a symbolic link to a directory.
+-P, --physical  Make hard links directly to symbolic links, rather than dereferencing them.
+-r, --relative  Create symbolic links relative to link location.
+-s, --symbolic  Make symbolic links instead of hard links.
+-S, --suffix=SUFFIX   Use the file suffix SUFFIX rather than the default suffix "~".
+-t, --target-directory=DIRECTORY  Specify the DIRECTORY in which to create the links.
+-T, --no-target-directory   Always treat LINKNAME as a normal file.
+-v, --verbose   Operate verbosely; print the name of each linked file.
+--help  Display a help message, and exit.
+--version   Display version information, and exit.
+
+
+how to give all data's hard link using below command
+ln /home/erp/Desktop/CSV_application/* . 
+how to get specific data's hard link.
+ln /home/erp/Desktop/CSV_application/*.py . 
+
+
+chmod u=rwx,g=rx,o=r myfile
+The letters u, g, and o stand for "user", "group", and "other".
+chmod 754 myfile
+
+    4 stands for "read",
+    2 stands for "write",
+    1 stands for "execute", and
+    0 stands for "no permission."
+So 7 is the combination of permissions 4+2+1 (read, write, and execute), 5 is 4+0+1 (read, no write, and execute), and 4 is 4+0+0 (read, no write, and no execute).
+
+how to change the ownership of file.
+sudo chown root new.txt
+sudo chown erp new.txt
+
+
+awk commands
+https://www.lifewire.com/write-awk-commands-and-scripts-2200573
+sed commands
+https://www.computerhope.com/unix/used.htm
+history command
+https://www.computerhope.com/unix/uhistory.htm
